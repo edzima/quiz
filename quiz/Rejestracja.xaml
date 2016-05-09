@@ -40,7 +40,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="0,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Text="Powtórz hasło:"/>
             <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,274,0,0" VerticalAlignment="Top" Width="456"/>
             <PasswordBox x:Name="txtPass2" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="456"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="296,499,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Content="Rejestracja" HorizontalAlignment="Left" Margin="296,499,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
         </Grid>
     </Grid>
