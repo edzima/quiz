@@ -26,7 +26,7 @@
             <!--ContentPanel - place additional content here-->
             <Grid x:Name="ContentPanel" Margin="10,145,14,-10" Height="963" VerticalAlignment="Top">
 
-                <Grid x:Name="answersPanel" Margin="0,78,0,0" Height="321" VerticalAlignment="Top">
+                <Grid x:Name="answersPanel" Margin="0,95,0,0" Height="321" VerticalAlignment="Top">
 
                     <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608">
 						<Run Text="Odpowiedzi:"/>
@@ -66,14 +66,14 @@
                     </toolkit:ListPicker.FullModeItemTemplate>
                 </toolkit:ListPicker>
 
-                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="302,406,10,247" x:Name="listTime">
+                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="302,416,10,237" x:Name="listTime">
                     <TextBlock Text="Średni (10s)" FontSize="18"/>
                     <TextBlock Text="Łatwy (20s)" FontSize="18"/>
                     <TextBlock Text="Trudny (5s)" FontSize="18"/>
                 </toolkit:ListPicker>
-                <TextBlock HorizontalAlignment="Left" Margin="10,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Poziom trudności:" Height="27"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Poziom trudności:" Height="27"/>
                 <Button Content="Dodaj" HorizontalAlignment="Left" Margin="-5,533,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click" Height="79"/>
-                <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="72" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+                <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="95" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="18"/>
                 <TextBlock Margin="10,-16,0,0" TextWrapping="Wrap" Text="Pytanie:" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" HorizontalAlignment="Left" Width="69"/>
                 <TextBlock HorizontalAlignment="Left" Margin="10,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Kategoria:" Height="27"/>
 
