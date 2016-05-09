@@ -35,7 +35,6 @@ namespace quiz
             txtQuizNr.Text = "Pobieram pytania...";
 
             webclient.DownloadStringAsync(new Uri(("http://robocza.h2g.pl/quiz/question.php?id_user=" + has.loadSettings("id_user"))));
-           
             webclient.DownloadStringCompleted += webClient_DownloadStringCompleted;
             
           

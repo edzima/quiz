@@ -1,5 +1,6 @@
 ﻿<phone:PhoneApplicationPage
     x:Class="quiz.ranking"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -28,7 +29,21 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,24,0">
-            <phone:LongListSelector x:Name="listRank" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="446"/>
+
+
+            <ListBox x:Name="lst" Margin="10,10,0,10"  Width="436" HorizontalAlignment="Left" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <TextBlock FontWeight="Bold" Text="{Binding rank}" Margin="5,0,0,0"/>
+                            <TextBlock FontWeight="Bold" Text="{Binding login}" Margin="5,0,0,0"/>
+                            <TextBlock FontStyle="Italic" Text="{Binding Poprawne_Odpowiedzi}" Margin="5,0,0,0"/>
+                            <TextBlock Text="czas" Margin="5,0,0,0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
 
         </Grid>
     </Grid>

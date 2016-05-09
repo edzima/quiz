@@ -13,7 +13,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -34,34 +34,35 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" Grid.ColumnSpan="2">
-            <Button Content="Wyloguj" HorizontalAlignment="Left" Margin="321,525,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.396,0.414" Click="Button_Click" Width="131"/>
-            <Button Content="Graj w Quiz" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="456"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="413*"/>
+                <RowDefinition Height="194*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Wyloguj" HorizontalAlignment="Left" Margin="276,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.396,0.414" Click="Button_Click" Width="170" Grid.Row="1"/>
+            <Button Content="Graj w Quiz" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="456">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/quiz.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
 
 
 
-
-            <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="245,237,4,146" x:Name="drugaLista">
-                <toolkit:ListPicker.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding name}" FontSize="20" FontFamily="Arial"  />
-                        </StackPanel>
-                    </DataTemplate>
-                </toolkit:ListPicker.ItemTemplate>
-                <toolkit:ListPicker.FullModeItemTemplate>
-                    <DataTemplate>
-                        <TextBlock>
-							<Run Text="{Binding name}" />
-                        </TextBlock>
-                    </DataTemplate>
-                </toolkit:ListPicker.FullModeItemTemplate>
-            </toolkit:ListPicker>
-
-
-
-            <Button Content="Button" HorizontalAlignment="Left" Margin="37,481,0,0" VerticalAlignment="Top" Click="Button_Click_2" Width="76"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="181,509,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click_3"/>
-            <Button Content="Dodaj quiz" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <Button Content="Ranking" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top"  Width="436">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/ranking.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Content="Dodaj quiz" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <ec:NavigateToPageAction TargetPage="/addQuiz.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
             <Button Content="Dodaj kategorię" HorizontalAlignment="Left" Margin="196,138,0,0" VerticalAlignment="Top" Width="256">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">

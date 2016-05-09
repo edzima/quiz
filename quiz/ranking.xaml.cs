@@ -30,7 +30,7 @@ namespace quiz
                 var filterdata = e.Result;
                 var filtervalue = JsonConvert.DeserializeObject<List<Ranking>>(filterdata); //JSON to Obcject C#
 
-                listRank.ItemsSource = filtervalue;
+                lst.ItemsSource = filtervalue;
                 //listCategory.ItemsSource = filtervalue;
                 /* 
                  JArray catJson = JArray.Parse(e.Result);
@@ -46,6 +46,7 @@ namespace quiz
         public class Ranking
         {
             public string login { get; set; }
+            public string rank { get; set; }
             public string Poprawne_Odpowiedzi { get; set; }
         }
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)

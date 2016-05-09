@@ -27,58 +27,19 @@ namespace quiz
             has.saveSettings("0", "id_user");
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+       
+     
+        private void PhoneApplicationPage_BackKeyPress(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/quiz.xaml", UriKind.Relative));
-        }
-
-
-
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/ranking.xaml", UriKind.Relative));
-        }
-
-
-        void webClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-        {
-          // Parse to Json String
-            if (!string.IsNullOrEmpty(e.Result))
+            MessageBoxResult mRes = MessageBox.Show("Czy chcesz zamknąć aplikacje?", "Exit", MessageBoxButton.OKCancel);
+            if (mRes == MessageBoxResult.OK)
             {
-
-                JArray catJson = JArray.Parse(e.Result);
-                //cmbCurrFrom.ItemsSource = catJson;
-
-                var filterdata = e.Result;
-                var filtervalue = JsonConvert.DeserializeObject<List<categories>>(filterdata); //JSON to Obcject C#
-
-                drugaLista.ItemsSource = filtervalue;
-         
-
-
-                foreach (var cat in catJson)
-                {
-                   // cmbCurrFrom.Items.Add(cat["name"].ToString());
-
-                }
-
+                Application.Current.Terminate();
+            }
+            if (mRes == MessageBoxResult.Cancel)
+            {
+                e.Cancel = true;
             }
         }
-
-        public class categories
-        {
-            public string name { get; set; }
-            public string id_cat { get; set; }
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-          
-        }
-
-      
     }
 }
