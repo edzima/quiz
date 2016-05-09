@@ -33,17 +33,17 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="118" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="17.333"/>
-            <Button Content="Potwierdź, nastepny quiz" HorizontalAlignment="Left" Margin="0,525,0,0" VerticalAlignment="Top" Width="456" Click="Button_Click"/>
+            <Button Content="Potwierdź, nastepny quiz" HorizontalAlignment="Left" Margin="0,498,0,0" VerticalAlignment="Top" Width="456" Click="Button_Click"/>
             <ContentControl HorizontalAlignment="Left" Margin="10,513,0,0" VerticalAlignment="Top"/>
-            <Grid Margin="31,128,10,170" x:Name="answersPanel">
-                <RadioButton x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="radio" Margin="-30,0,-206,0" Width="429"/>
-                <RadioButton x:Name="_1" Content="" HorizontalAlignment="Left" Margin="-30,88,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429"/>
-                <RadioButton x:Name="_2" Content="" HorizontalAlignment="Left" Margin="-30,160,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429"/>
-                <RadioButton x:Name="_3" Content="" HorizontalAlignment="Left" Margin="-30,237,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429"/>
+            <Grid Margin="31,128,10,118" x:Name="answersPanel">
+                <RadioButton x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="radio" Margin="-30,0,-206,0" Width="429" FontSize="18"/>
+                <RadioButton x:Name="_1" Content="" HorizontalAlignment="Left" Margin="-30,88,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
+                <RadioButton x:Name="_2" Content="" HorizontalAlignment="Left" Margin="-30,160,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
+                <RadioButton x:Name="_3" Content="" HorizontalAlignment="Left" Margin="-30,237,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
 
             </Grid>
-            <ProgressBar x:Name="czasBar" HorizontalAlignment="Left" Height="21" Margin="0,499,0,0" VerticalAlignment="Top" Width="456" Value="100"/>
-            <TextBlock x:Name="txtPozostalo" HorizontalAlignment="Left" Margin="10,467,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289">
+            <ProgressBar x:Name="czasBar" HorizontalAlignment="Left" Height="21" Margin="0,472,0,0" VerticalAlignment="Top" Width="456" Value="100"/>
+            <TextBlock x:Name="txtPozostalo" HorizontalAlignment="Left" Margin="10,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289">
             	<Run Text="Pozostało Ci "/>
             	<Run Text="10 s"/>
             </TextBlock>
