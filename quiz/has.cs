@@ -38,7 +38,7 @@ namespace quiz
             return string.Join("", hash.Select(b => b.ToString("x2")).ToArray());
         }
 
-        public static string dataJson;
+    
 
 
 

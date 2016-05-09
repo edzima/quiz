@@ -51,23 +51,14 @@ namespace quiz
 
                 //pobranie pytan i rozpoaczecie quizu
             else
-            {
-                if(response!=has.dataJson){ //sprawdzenie czy nie pobralo starych danych
-               
+            { 
                 questionJson = JArray.Parse(e.Result.ToString());
                 question = 0;
                 timeAll = 0;
                 goodAnswer = 0;
 
                 nextQuestion();
-                has.dataJson = response;
-                }
-                else
-                {
-                    MessageBoxResult result = MessageBox.Show("Brak quziów do rozwiązania, poczekaj na nowe!");
-                    if (result == MessageBoxResult.OK) NavigationService.GoBack();
-
-                }
+               
             }
 
         }
@@ -204,6 +195,8 @@ namespace quiz
 
                 WebClient webclient = new WebClient();
                 txtQuizNr.Text = "Pobieram pytania...";
+
+                webclient.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.UtcNow.ToString();
 
                 webclient.DownloadStringAsync(new Uri(("http://robocza.h2g.pl/quiz/question.php?id_user=" + has.loadSettings("id_user") + "&id_cat=" + id_cat)));
                 webclient.DownloadStringCompleted += webClient_DownloadStringCompleted;
