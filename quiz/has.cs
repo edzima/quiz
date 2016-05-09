@@ -19,6 +19,17 @@ using System.IO.IsolatedStorage;
 
 namespace quiz
 {
+    public class categories
+    {
+        public string name { get; set; }
+        public string id_cat { get; set; }
+
+        public categories(String n, String id)
+        {
+            name = n;
+            id_cat = id;
+        }
+    }
     class has
     {
         public static string Hash(string input)

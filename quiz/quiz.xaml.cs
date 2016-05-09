@@ -27,17 +27,12 @@ namespace quiz
 
         double timeAll;
         int goodAnswer;
+        string id_cat = "";
 
+      
         public add()
         {
             InitializeComponent();
-            WebClient webclient = new WebClient();
-            txtQuizNr.Text = "Pobieram pytania...";
-
-            webclient.DownloadStringAsync(new Uri(("http://robocza.h2g.pl/quiz/question.php?id_user=" + has.loadSettings("id_user"))));
-            webclient.DownloadStringCompleted += webClient_DownloadStringCompleted;
-            
-          
         }
 
         
@@ -203,6 +198,17 @@ namespace quiz
 
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
         {
+
+            if (NavigationContext.QueryString.TryGetValue("id_cat", out id_cat))
+            {
+
+                WebClient webclient = new WebClient();
+                txtQuizNr.Text = "Pobieram pytania...";
+
+                webclient.DownloadStringAsync(new Uri(("http://robocza.h2g.pl/quiz/question.php?id_user=" + has.loadSettings("id_user") + "&id_cat=" + id_cat)));
+                webclient.DownloadStringCompleted += webClient_DownloadStringCompleted;
+
+            }
 
         }
     }

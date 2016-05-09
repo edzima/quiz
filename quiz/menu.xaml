@@ -42,7 +42,7 @@
             <Button Content="Graj w Quiz" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="456">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <ec:NavigateToPageAction TargetPage="/quiz.xaml"/>
+                        <ec:NavigateToPageAction TargetPage="/selectCategoryQuiz.xaml"/>
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </Button>

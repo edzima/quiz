@@ -12,6 +12,8 @@ using System.IO;
 
 namespace quiz
 {
+
+   
     public partial class addQuiz : PhoneApplicationPage
     {
         int indexAnswer = -1;
@@ -46,11 +48,6 @@ namespace quiz
         }
 
 
-        public class categories
-        {
-            public string name { get; set; }
-            public string id_cat { get; set; }
-        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
