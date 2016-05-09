@@ -47,6 +47,7 @@ namespace quiz
         {
             public string login { get; set; }
             public string rank { get; set; }
+            public string Sredni_Czas { get; set; }
             public string Poprawne_Odpowiedzi { get; set; }
         }
         private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
