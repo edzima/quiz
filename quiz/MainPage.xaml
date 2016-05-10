@@ -14,10 +14,10 @@
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF202E24">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" MinHeight="172"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!-- LOCALIZATION NOTE:
@@ -40,22 +40,43 @@
          -->
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="10,72,2,534" Grid.RowSpan="2">
+            <TextBlock Text="Logowanie" Margin="10,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Agency FB" Height="89" VerticalAlignment="Top" Foreground="White" Width="392" HorizontalAlignment="Left"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Logowanie" HorizontalAlignment="Left" Margin="0,455,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-            <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="72" Margin="0,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
-            <TextBlock x:Name="phpStatus" HorizontalAlignment="Left" Margin="200,389,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-            <Button Content="Rejestracja" HorizontalAlignment="Left" Margin="285,455,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,176,0,0" VerticalAlignment="Top" Width="456"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,57,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,156,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top"/>
+        <Grid x:Name="ContentPanel" Height="529" VerticalAlignment="Bottom" Grid.Row="1" Margin="10,0,-10,0">
+            <Button Content="Zaloguj" HorizontalAlignment="Left" Margin="60,216,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Agency FB" FontSize="32" Width="352">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF202E24" Offset="1"/>
+                        <GradientStop Color="#FF666666"/>
+                        <GradientStop Color="Gray"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="72" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
+            <TextBlock x:Name="phpStatus" Margin="58,0,43,12" TextWrapping="Wrap" FontSize="32" FontFamily="Agency FB" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="88" RenderTransformOrigin="0.5,0.5" Width="379" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock.RenderTransform>
+                    <CompositeTransform ScaleY="-1" ScaleX="-1" Rotation="179.865"/>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <Button Content="Utwórz konto" HorizontalAlignment="Left" Margin="60,327,0,0" VerticalAlignment="Top" Click="Button_Click_1" FontFamily="Agency FB" FontSize="32" Width="352">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF202E24" Offset="1"/>
+                        <GradientStop Color="#FF666666"/>
+                        <GradientStop Color="Gray"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Width="456"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,108,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="22"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="lub" VerticalAlignment="Top" Margin="220,295,0,0"/>
 
         </Grid>
+        <TextBlock Text="Quiz" Style="{StaticResource PhoneTextNormalStyle}" Margin="212,10,82,105" FontFamily="Agency FB" FontSize="36" HorizontalAlignment="Center" RenderTransformOrigin="0.542,-1.302" Width="186"/>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to

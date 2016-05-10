@@ -30,7 +30,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,10,488" x:Name="listCategory">
+            <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="10,0,10,111" x:Name="listCategory">
                 <toolkit:ListPicker.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
