@@ -49,7 +49,7 @@
             </Button>
 
 
-            <Button Content="Graj w Quiz" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="32" Width="306" Click="Button_Click_1">
+            <Button Content="Graj!" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="32" Width="306" Click="Button_Click_1">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <ec:NavigateToPageAction TargetPage="/selectCategoryQuiz.xaml"/>
