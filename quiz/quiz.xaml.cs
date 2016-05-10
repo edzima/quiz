@@ -45,7 +45,7 @@ namespace quiz
 
             if (string.IsNullOrEmpty(e.Result.ToString().Trim())) // brak pytan w bazie
             {
-                MessageBoxResult result = MessageBox.Show("Brak quziów do rozwiązania, poczekaj na nowe!");
+                MessageBoxResult result = MessageBox.Show("Brak quizów do rozwiązania, poczekaj na nowe!");
                 if (result == MessageBoxResult.OK) NavigationService.GoBack();
             }
 
