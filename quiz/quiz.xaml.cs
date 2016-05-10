@@ -97,7 +97,7 @@ namespace quiz
             }
             else
             {
-                if (time >= 0)  MessageBox.Show("Nie zazczaczyłeś odpowiedzi!");
+                if (time >= 0)  MessageBox.Show("Nie zaznaczyłeś odpowiedzi!");
                 return false;            
             }     
         }
@@ -154,7 +154,7 @@ namespace quiz
                         checkAnswerAndSendResult();
                         String text;
                         if(goodAnswer>0)  text = "Koniec quizu. Odpowiedziałeś poprawnie na: "+goodAnswer+" pytania. Średni czas poprawnej odpowiedzi: "+timeAll/goodAnswer +"s.";
-                        else  text = "Koniec quziu. Nie odpowiedziałeś poprawnie na żadne pytanie :(";
+                        else  text = "Koniec quizu. Nie odpowiedziałeś poprawnie na żadne pytanie :(";
 
                         MessageBoxResult result = MessageBox.Show(text);
                         if (result == MessageBoxResult.OK)  NavigationService.GoBack();
