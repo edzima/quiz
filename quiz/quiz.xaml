@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF202E24">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,28 +22,32 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">
-            	<Run Text="Quiz"/>
-            	<LineBreak/>
-            	<Run/>
-            </TextBlock>
-            <TextBlock x:Name="txtQuizNr" Text="Quiz nr: " Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Quiz" Style="{StaticResource PhoneTextNormalStyle}" Margin="191,10,76,105" FontFamily="Agency FB" FontSize="36" HorizontalAlignment="Center" RenderTransformOrigin="0.542,-1.302" Width="201"/>
+            <TextBlock x:Name="txtQuizNr" Text="Pytanie nr: " Margin="9,-100,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="72"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="118" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="17.333"/>
-            <Button Content="Potwierdź, nastepny quiz" HorizontalAlignment="Left" Margin="0,498,0,0" VerticalAlignment="Top" Width="456" Click="Button_Click"/>
+        <Grid x:Name="ContentPanel" Margin="14,180,10,23" Grid.RowSpan="2">
+            <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="118" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="22"/>
+            <Button Content="Odpowiedz" HorizontalAlignment="Left" Margin="0,478,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="456" Click="Button_Click" Height="78" FontSize="32">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF202E24" Offset="1"/>
+                        <GradientStop Color="#FF666666"/>
+                        <GradientStop Color="Gray"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
             <ContentControl HorizontalAlignment="Left" Margin="10,513,0,0" VerticalAlignment="Top"/>
             <Grid Margin="31,128,10,118" x:Name="answersPanel">
-                <RadioButton x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="radio" Margin="-30,0,-206,0" Width="429" FontSize="18"/>
-                <RadioButton x:Name="_1" Content="" HorizontalAlignment="Left" Margin="-30,88,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
-                <RadioButton x:Name="_2" Content="" HorizontalAlignment="Left" Margin="-30,160,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
-                <RadioButton x:Name="_3" Content="" HorizontalAlignment="Left" Margin="-30,237,-206,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="18"/>
+                <RadioButton x:Name="_0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="radio" Margin="-30,0,-206,0" Width="429" FontSize="20"/>
+                <RadioButton x:Name="_1" Content="" HorizontalAlignment="Left" Margin="-30,72,0,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="20"/>
+                <RadioButton x:Name="_2" Content="" HorizontalAlignment="Left" Margin="-30,144,0,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="20"/>
+                <RadioButton x:Name="_3" Content="" HorizontalAlignment="Left" Margin="-30,216,0,0" VerticalAlignment="Top"  GroupName="radio" Width="429" FontSize="20"/>
 
             </Grid>
-            <ProgressBar x:Name="czasBar" HorizontalAlignment="Left" Height="21" Margin="0,472,0,0" VerticalAlignment="Top" Width="456" Value="100"/>
-            <TextBlock x:Name="txtPozostalo" HorizontalAlignment="Left" Margin="10,440,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289">
+            <ProgressBar x:Name="czasBar" HorizontalAlignment="Left" Height="21" Margin="0,457,0,0" VerticalAlignment="Top" Width="456" Value="100"/>
+            <TextBlock x:Name="txtPozostalo" HorizontalAlignment="Left" Margin="10,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="289">
             	<Run Text="Pozostało Ci "/>
             	<Run Text="10 s"/>
             </TextBlock>

@@ -33,12 +33,12 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,0,10,0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="27,42,23,-42" Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="413*"/>
                 <RowDefinition Height="194*"/>
             </Grid.RowDefinitions>
-            <Button Content="Wyloguj" HorizontalAlignment="Left" Margin="260,84,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.396,0.414" Click="Button_Click" FontFamily="Agency FB" FontSize="32" Width="170" Grid.Row="1" >
+            <Button Content="Wyloguj" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.396,0.414" Click="Button_Click" FontFamily="Agency FB" FontSize="32" Width="313" Grid.Row="1" >
                 <Button.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="#FF202E24" Offset="1"/>
