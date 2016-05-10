@@ -18,6 +18,7 @@ namespace quiz
             InitializeComponent();
 
             var webclient = new WebClient();
+            webclient.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.UtcNow.ToString();
             webclient.DownloadStringCompleted += webClient_DownloadStringCompleted;
             webclient.DownloadStringAsync(new Uri(string.Format("http://www.robocza.h2g.pl/quiz/ranking.php?id_user=1")));
 
