@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="#FF202E24t">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -22,25 +22,33 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Załóż konto" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Quiz" Style="{StaticResource PhoneTextNormalStyle}" Margin="191,10,76,105" FontFamily="Agency FB" FontSize="36" HorizontalAlignment="Center" RenderTransformOrigin="0.542,-1.302" Width="201"/>
+            <TextBlock Text="Załóż konto" Margin="9,-90,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Agency FB"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="72" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
+
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="24"/>
+            <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="72" Margin="0,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontFamily="Agency FB"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="24">
             	<Run Text="E-mail"/>
             	<Run Text=":"/>
             </TextBlock>
-            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="72" Margin="0,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,242,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="0,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Text="Powtórz hasło:"/>
-            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,274,0,0" VerticalAlignment="Top" Width="456"/>
-            <PasswordBox x:Name="txtPass2" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="456"/>
-            <Button Content="Rejestracja" HorizontalAlignment="Left" Margin="296,499,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+            <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="72" Margin="0,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontFamily="Agency FB"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,245,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="248" Text="Powtórz hasło:" FontFamily="Agency FB" FontSize="24"/>
+            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,274,0,0" VerticalAlignment="Top" Width="456" FontFamily="Agency FB"/>
+            <PasswordBox x:Name="txtPass2" HorizontalAlignment="Left" Margin="0,389,0,0" VerticalAlignment="Top" Width="456" FontFamily="Agency FB"/>
+            <Button Content="Rejestracja" HorizontalAlignment="Left" Margin="0,461,0,0" VerticalAlignment="Top" Click="Button_Click" Height="98" Width="456" FontFamily="Agency FB" FontSize="32">
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FF202E24" Offset="1"/>
+                        <GradientStop Color="#FF666666"/>
+                        <GradientStop Color="Gray"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
 
         </Grid>
     </Grid>

@@ -73,7 +73,7 @@
             <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="0,139,0,0" VerticalAlignment="Top" Width="456"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Login:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="22"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,108,0,0" TextWrapping="Wrap" Text="Hasło:" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="22"/>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="lub" VerticalAlignment="Top" Margin="220,295,0,0"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="lub" VerticalAlignment="Top" Margin="220,295,0,0" FontFamily="Agency FB" FontSize="24"/>
 
         </Grid>
         <TextBlock Text="Quiz" Style="{StaticResource PhoneTextNormalStyle}" Margin="212,10,82,105" FontFamily="Agency FB" FontSize="36" HorizontalAlignment="Center" RenderTransformOrigin="0.542,-1.302" Width="186"/>

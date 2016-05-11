@@ -28,7 +28,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="14,180,10,23" Grid.RowSpan="2">
-            <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="118" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="22"/>
+            <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="118" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="22" FontFamily="Agency FB" IsReadOnly="True" IsHitTestVisible="False" IsTabStop="False" />
             <Button Content="Odpowiedz" HorizontalAlignment="Left" Margin="0,478,0,0" VerticalAlignment="Top" FontFamily="Agency FB" Width="456" Click="Button_Click" Height="78" FontSize="32">
                 <Button.Background>
                     <RadialGradientBrush>

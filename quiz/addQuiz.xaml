@@ -15,41 +15,47 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <ScrollViewer x:Name="LayoutRoot" Background="Transparent" Margin="0,0,0,-340">
+    <ScrollViewer x:Name="LayoutRoot" Background="#FF202E24" Margin="0,0,0,-340">
         <Grid Height="1098">
             <!--TitlePanel contains the name of the application and page title-->
-            <StackPanel Grid.Row="0" Margin="12,17,0,975">
-                <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
-                <TextBlock Text="Dodaj Quiz ; )" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <StackPanel Grid.Row="0" Margin="12,0,0,938">
+                <TextBlock Text="Quiz" Style="{StaticResource PhoneTextNormalStyle}" Margin="191,10,76,105" FontFamily="Agency FB" FontSize="36" HorizontalAlignment="Center" RenderTransformOrigin="0.542,-1.302" Width="201"/>
+                <TextBlock Margin="9,-100,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="72" FontFamily="Agency FB" Height="86">
+                	<Run Text="Dodaj nowy:"/>
+                </TextBlock>
             </StackPanel>
 
             <!--ContentPanel - place additional content here-->
-            <Grid x:Name="ContentPanel" Margin="10,145,14,-10" Height="963" VerticalAlignment="Top">
+            <Grid x:Name="ContentPanel" Margin="12,165,14,-10" Height="943" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="207*"/>
+                </Grid.ColumnDefinitions>
 
-                <Grid x:Name="answersPanel" Margin="0,95,0,0" Height="321" VerticalAlignment="Top">
+                <Grid x:Name="answersPanel" Margin="0,95,0,0" Height="321" VerticalAlignment="Top" Grid.ColumnSpan="2">
 
-                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608">
+                    <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" FontFamily="Agency FB" FontSize="24">
 						<Run Text="Odpowiedzi:"/>
 						<LineBreak/>
 						<Run/>
                     </TextBlock>
                     <RadioButton x:Name="_0" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="456" Height="82" FontSize="8">
-                        <TextBox x:Name="txtAnswer0" Text="" Width="399" Height="60"  FontSize="16"/>
+                        <TextBox x:Name="txtAnswer0" Text="" Width="399" Height="72"  FontSize="20" FontFamily="Agency FB"/>
                     </RadioButton>
 
                     <RadioButton x:Name="_1" HorizontalAlignment="Left" Margin="0,92,0,0" VerticalAlignment="Top" Width="456" Height="82">
-                        <TextBox x:Name="txtAnswer1" Text="" Width="399" Height="62" />
+                        <TextBox x:Name="txtAnswer1" Text="" Width="399" Height="72" FontSize="20" FontFamily="Agency FB" />
                     </RadioButton>
                     <RadioButton x:Name="_2" HorizontalAlignment="Left" Margin="0,174,0,0" VerticalAlignment="Top" Width="456" Height="82">
-                        <TextBox x:Name="txtAnswer2" Text="" Width="399" Height="62" />
+                        <TextBox x:Name="txtAnswer2" Text="" Width="399" Height="72" FontSize="20" FontFamily="Agency FB" />
                     </RadioButton>
 
                     <RadioButton x:Name="_3" HorizontalAlignment="Left" Margin="0,256,0,0" VerticalAlignment="Top" Width="456" Height="82">
-                        <TextBox x:Name="txtAnswer3" Text="" Width="399" Height="62" />
+                        <TextBox x:Name="txtAnswer3" Text="" Width="399" Height="72" FontSize="20" FontFamily="Agency FB" />
                     </RadioButton>
 
                 </Grid>
-                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="222,478,10,10" x:Name="listCategory">
+                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="224,478,10,10" x:Name="listCategory" FontSize="22" FontFamily="Agency FB" Grid.Column="1" Background="#FF202E24">
                     <toolkit:ListPicker.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -66,16 +72,24 @@
                     </toolkit:ListPicker.FullModeItemTemplate>
                 </toolkit:ListPicker>
 
-                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="302,416,10,237" x:Name="listTime">
-                    <TextBlock Text="Średni (10s)" FontSize="18"/>
-                    <TextBlock Text="Łatwy (20s)" FontSize="18"/>
-                    <TextBlock Text="Trudny (5s)" FontSize="18"/>
+                <toolkit:ListPicker ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="224,416,10,237" x:Name="listTime" Grid.Column="1" Background="#FF202E24">
+                    <TextBlock Text="Średni (10s)" FontSize="22" FontFamily="Agency FB"/>
+                    <TextBlock Text="Łatwy (20s)" FontSize="22"/>
+                    <TextBlock Text="Trudny (5s)" FontSize="22"/>
                 </toolkit:ListPicker>
-                <TextBlock HorizontalAlignment="Left" Margin="10,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Poziom trudności:" Height="27"/>
-                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="-5,533,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click" Height="79"/>
-                <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="95" Margin="0,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="18"/>
-                <TextBlock Margin="10,-16,0,0" TextWrapping="Wrap" Text="Pytanie:" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" HorizontalAlignment="Left" Width="69"/>
-                <TextBlock HorizontalAlignment="Left" Margin="10,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Kategoria:" Height="27"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,431,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Poziom trudności:" Height="27" FontFamily="Agency FB" FontSize="24" Grid.ColumnSpan="2"/>
+                <Button Content="Dodaj" HorizontalAlignment="Left" Margin="0,522,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click" Height="79" FontSize="26" FontFamily="Agency FB" Grid.ColumnSpan="2">
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF202E24" Offset="1"/>
+                            <GradientStop Color="#FF666666"/>
+                            <GradientStop Color="Gray"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                </Button>
+                <TextBox x:Name="txtQuestion" HorizontalAlignment="Left" Height="95" Margin="0,6,-2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="22" FontFamily="Agency FB" Grid.ColumnSpan="2"/>
+                <TextBlock Margin="10,-16,0,0" TextWrapping="Wrap" Text="Pytanie:" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" HorizontalAlignment="Left" Width="93" FontFamily="Agency FB" FontSize="24" Grid.ColumnSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-1.474,0.608" Text="Kategoria:" Height="27" FontFamily="Agency FB" FontSize="24" Grid.ColumnSpan="2"/>
 
             </Grid>
         </Grid>
