@@ -11,8 +11,10 @@ using Newtonsoft.Json;
 
 namespace quiz
 {
+   
     public partial class ranking : PhoneApplicationPage
     {
+        
         public ranking()
         {
             InitializeComponent();
@@ -46,8 +48,15 @@ namespace quiz
         }
         public class Ranking
         {
+            private static int rank = 0;
             public string login { get; set; }
-            public string rank { get; set; }
+            public int Rank {
+                get {
+                    rank = rank + 1;
+                    return rank;
+                }
+                set { }
+            }
             public string Sredni_Czas { get; set; }
             public string Poprawne_Odpowiedzi { get; set; }
         }
